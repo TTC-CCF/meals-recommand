@@ -4,20 +4,19 @@
         <title>Meal Recommandation</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        
+        
     </head>
     <body>
-        <div class="columns is-mobile is-centered">
-            <div class="column is-half">
-               <p class="notification"> Meal Recommandation</p>
-            </div>
-        </div>
+      <div style="height:10vh"></div>
+      
         <div class="columns is-centered">
             <div class="column is-half">
-                <form method="POST" action="/meals/">
-
+                <div class="box">
+                <p class="title">Meal Recommandation</p>
                     <div class="field">
                         <label class="label">想吃什麼料理</label>
-                        <div class="control has-icons-left has-icons-right">
+                        <div>
                           <input class="input" type="text" placeholder="中式料理" list="mealstype" name="MealsType">
                           <datalist id="mealstype">
                             <option>日式料理</option>
@@ -35,22 +34,24 @@
                       
                       <div class="field">
                         <label class="label">熱量上限</label>
-                        <div class="control has-icons-left has-icons-right">
+                        <div>
                           <input class="input" type="number" placeholder="100-2000" min="100" max="2000" step="100" name="Carolies">
                         </div>
                       </div>
 
                       <div class="field">
-                        <button class="button is-primary" type="submit">餐點建議</button>
+                        <div class="button is-primary" onclick="getRecommand()">餐點建議</div>
                       </div>
-                </form>
+                </div>
                 <div id="user"></div>
                 
             </div>
         </div>
         
+        
         <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
         <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
         <script src="liff.js"></script>
+
     </body>
 </html>
