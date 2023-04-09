@@ -14,7 +14,6 @@
         <div class="columns is-centered">
             <div class="column is-half">
                 <form method="POST" action="/meals/">
-                    {% csrf_token %}
 
                     <div class="field">
                         <label class="label">想吃什麼料理</label>
@@ -45,17 +44,6 @@
                         <button class="button is-primary" type="submit">餐點建議</button>
                       </div>
                 </form>
-                {% for ch in recommand %}
-                    {% if ch == '$'%}
-                      <br>
-                    {% else %}
-                    {{ch}}
-                    {% if ch == '卡' %}
-                      <br> 
-                    {% endif %}
-                    {% endif %}
-                    
-                {% endfor %}
                 
                 
             </div>
