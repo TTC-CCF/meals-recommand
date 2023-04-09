@@ -5,8 +5,12 @@ async function initialize(){
     if (!liff.isLoggedIn()){
         await liff.login();
     }
-    profile = await liff.getProfile();
-    console.log(profile);
 };
 
+async function showProfile(){
+    profile = await liff.getProfile();
+    $('#user').text('Hello '+profile.displayName);
+}
+
 initialize();
+showProfile();
