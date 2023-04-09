@@ -30,6 +30,8 @@ async function getRecommand(){
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
     });
+
+    console.log(response);
 }
 
 initialize()
