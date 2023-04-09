@@ -12,5 +12,5 @@ async function showProfile(){
     $('#user').text('Hello '+profile.displayName);
 }
 
-initialize();
-showProfile();
+await initialize();
+await showProfile();
