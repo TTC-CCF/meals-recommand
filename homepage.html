@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meal Recommandation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </head>
+    <body>
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+               <p class="notification"> Meal Recommandation</p>
+            </div>
+        </div>
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <form method="POST" action="/meals/">
+                    {% csrf_token %}
+
+                    <div class="field">
+                        <label class="label">想吃什麼料理</label>
+                        <div class="control has-icons-left has-icons-right">
+                          <input class="input" type="text" placeholder="中式料理" list="mealstype" name="MealsType">
+                          <datalist id="mealstype">
+                            <option>日式料理</option>
+                            <option>中式料理</option>
+                            <option>台式料理</option>
+                            <option>美式料理</option>
+                            <option>泰式料理</option>
+                            <option>西班牙料理</option>
+                            <option>葡式料理</option>
+                            <option>麵</option>
+                            <option>米製品</option>
+                          </datalist>
+                        </div>
+                      </div>
+                      
+                      <div class="field">
+                        <label class="label">熱量上限</label>
+                        <div class="control has-icons-left has-icons-right">
+                          <input class="input" type="number" placeholder="100-2000" min="100" max="2000" step="100" name="Carolies">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <button class="button is-primary" type="submit">餐點建議</button>
+                      </div>
+                </form>
+                {% for ch in recommand %}
+                    {% if ch == '$'%}
+                      <br>
+                    {% else %}
+                    {{ch}}
+                    {% if ch == '卡' %}
+                      <br> 
+                    {% endif %}
+                    {% endif %}
+                    
+                {% endfor %}
+                
+                
+            </div>
+        </div>
+        
+        
+        <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+    </body>
+</html>
