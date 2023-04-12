@@ -28,7 +28,7 @@ async function getRecommand(){
     }),
     headers:{
       'Content-Type': 'application/json',
-      'Authorization':'Bearer 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',
+      'Authorization':'Bearer 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',
     }
   })
   .then(response => response.json())
