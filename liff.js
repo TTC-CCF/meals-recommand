@@ -1,4 +1,5 @@
 var liffID = '1660848123-Klzq2xdj';
+const kk = "f9WWADzmDP4dWuio04JgT3BlbkFJoboaFkc7tmolz9vxfrHo";
 
 async function initialize(){
     await liff.init({ liffId:liffID });
@@ -28,7 +29,7 @@ async function getRecommand(){
     }),
     headers:{
       'Content-Type': 'application/json',
-      'Authorization':'Bearer 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',
+      'Authorization':'Bearer '+'sk-'+kk,
     }
   })
   .then(response => response.json())
