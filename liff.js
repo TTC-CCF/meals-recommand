@@ -22,7 +22,7 @@ async function getRecommand(){
     body: JSON.stringify({
       "model":"gpt-3.5-turbo",
       "messages": [{
-        "role":"popuku", 
+        "role":"user", 
         "content": "我想要吃"+String(mt)+"，熱量不能超過"+String(cal)+"，你有什麼推薦的餐點嗎? 格式: '菜名' '熱量'卡",
       }],
       "temperature":0.5
