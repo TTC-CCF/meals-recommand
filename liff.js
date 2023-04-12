@@ -13,29 +13,11 @@ async function showProfile(){
 }
 
 async function getRecommand(){
-    await liff.sendMessages({
-        type:'text',
-        text:'你好啊'
-    });
-    // const mt = $("input[name='MealsType']").value;
-    // const cal = $("input[name='Carolies']").value;
-    // const { Configuration, OpenAIApi } = require("openai");
-
-    // const configuration = new Configuration({
-    //   apiKey: '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',
-    // });
-    // const openai = new OpenAIApi(configuration);
-    
-    // const response = await openai.createCompletion({
-    //   model: "text-davinci-003",
-    //   prompt: "我想吃"+mt+"，熱量不能超過"+String(cal)+"，請給我一些推薦的菜色。格式:菜名 熱量(卡)。",
-    //   temperature: 0.5,
-    //   max_tokens: 100,
-    //   frequency_penalty: 0.0,
-    //   presence_penalty: 0.0,
-    // });
-
-    // console.log(response);
+  const mt = $("[name='MealsType']").val();
+  const cal = $("[name='Calrolies']").val();
+  $.post("http://13.211.56.39:3000/api/recommend", {"food_type":mt, "calories_limit":cal}, function(result){
+    console.log(result.message);
+  })
 }
 
 initialize()
