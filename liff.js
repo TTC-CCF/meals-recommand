@@ -20,7 +20,7 @@ async function getRecommand(){
   })
 }
 
-initialize()
-    .then(()=>{
-        showProfile();
-    });
+// initialize()
+//     .then(()=>{
+//         showProfile();
+//     });
