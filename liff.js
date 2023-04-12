@@ -14,17 +14,15 @@ async function showProfile(){
 }
 
 async function getRecommand(){
-  const url ="https://api.openai.com/v1/chat/completions"
+  const url ="https://api.openai.com/v1/completions"
   const mt = $("[name='MealsType']").val();
   const cal = $("[name='Calories']").val();
   fetch(url, {
     method: 'POST',
     body: JSON.stringify({
       "model":"text-davinci-003",
-      "messages": [{
-        "role":"user", 
-        "content": "我想要吃"+String(mt)+"，熱量不能超過"+String(cal)+"，請列出一些菜名，格式: '菜名' '熱量'卡",
-      }],
+      "max_tokens": 1000,
+      "prompt": "我想要吃"+String(mt)+"，熱量不能超過"+String(cal)+"，請列出一些菜名，格式: '菜名' '熱量'卡",
       "temperature":0.5
     }),
     headers:{
