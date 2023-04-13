@@ -5,7 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         
-        
+        <style>
+          #loading{
+            min-width: 100%;
+            min-height: 100%;
+            position:absolute;
+            left:0px;
+            top: 0px;
+            z-index:1;
+            background-color: rgba(0, 0, 0, .25);
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100vh;
+            font-size:50px;
+          }
+          #notloading{
+            display:none;
+          }
+        </style>
     </head>
     <body>
       <div style="height:10vh"></div>
@@ -26,7 +44,8 @@
                             <option>泰式料理</option>
                             <option>西班牙料理</option>
                             <option>葡式料理</option>
-                            <option>麵</option>
+                            <option>義式料理</option>
+                            <option>炸物</option>
                             <option>米製品</option>
                           </datalist>
                         </div>
@@ -45,6 +64,8 @@
                 </div>
                 <div id="user"></div>
                 
+                <div id="notloading">Loading...</div>
+
             </div>
         </div>
         
