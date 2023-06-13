@@ -1,6 +1,5 @@
 var liffID = '1660848123-Klzq2xdj';
-const kk = "f9WWADzmDP4dWuio04JgT3BlbkFJoboaFkc7tmolz9vxfrHo";
-
+const kk = "RqSyG1BfdcsRCYDRZfSOT3BlbkFJ88OUCEfEEvgImpMBvrSa";
 async function initialize(){
     await liff.init({ liffId:liffID });
     if (!liff.isLoggedIn()){
