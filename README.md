@@ -1,4 +1,8 @@
-# TTC-CCF.github.io
+# Meals Recommandation
+### Link:
+[meals-recommand](https://ttc-ccf.github.io/meals-recommand)
 
-## Some project using this page
-- [Meals recommand page](https://liff.line.me/1660848123-Klzq2xdj)
+### Features:
+- gpt-text api
+- liff hook (to do)
+###### tags: openai liff
