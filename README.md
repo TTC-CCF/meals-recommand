@@ -1,6 +1,6 @@
-# Meals Recommandation
+# Meals Recommendation
 ### Link:
-[meals-recommand](https://ttc-ccf.github.io/meals-recommand)
+[meals-recommend](https://ttc-ccf.github.io/meals-recommend)
 
 ### Features:
 - gpt-text api
