@@ -22,7 +22,7 @@ async function getRecommand(){
     method: 'POST',
     body: JSON.stringify({
       "model":"text-davinci-003",
-      "max_tokens": 1000,
+      "max_tokens": 300,
       "prompt": "我想要吃"+String(mt)+"，熱量不能超過"+String(cal)+"，請列出一些菜名，格式: '菜名' '熱量'大卡。",
       "temperature":0.5
     }),
