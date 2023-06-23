@@ -1,14 +1,18 @@
 require('dotenv').config()
 const openai_key = process.env.OPENAI_KEY
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 const url = "https://api.openai.com/v1/completions"
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
 app.post('/apis/get_recommend',  (req, res) => {
     res.set('Access-Control-Allow-Origin', 'http://localhost:10')
-    mt = req["mt"]
-    cal = req["cal"]
+    mt = req.body.mt
+    cal = req.body.mt
     fetch(url, {
         method: 'POST',
         body: JSON.stringify({
