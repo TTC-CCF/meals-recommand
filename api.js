@@ -11,7 +11,7 @@ async function showProfile(){
 }
 
 async function getRecommand(){
-  const url ="http://localhost:3000/apis/get_recommend"
+  const url ="http://52.62.230.199/apis/get_recommend"
   const mt = $("[name='MealsType']").val();
   const cal = $("[name='Calories']").val();
   $("#user").empty();
