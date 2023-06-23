@@ -11,7 +11,7 @@ async function showProfile(){
 }
 
 async function getRecommand(){
-  const url ="http://52.62.230.199/apis/get_recommend"
+  const url ="https://5dlypolux2.execute-api.ap-southeast-2.amazonaws.com/apis/get_recommendd"
   const mt = $("[name='MealsType']").val();
   const cal = $("[name='Calories']").val();
   $("#user").empty();
